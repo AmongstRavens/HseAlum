@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Switch Cell" id="jHS-WB-rML" customClass="CustomCell" customModule="HseAlum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jHS-WB-rML" id="fpU-Kr-JtV">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVz-4g-u39">
+                        <rect key="frame" x="316" y="6" width="51" height="31"/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Cell Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knE-dR-MpT">
+                        <rect key="frame" x="18" y="8" width="283" height="27.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CVz-4g-u39" firstAttribute="centerY" secondItem="fpU-Kr-JtV" secondAttribute="centerY" id="Uza-g1-E5a"/>
+                    <constraint firstItem="knE-dR-MpT" firstAttribute="leading" secondItem="fpU-Kr-JtV" secondAttribute="leadingMargin" constant="10" id="VRB-G4-35R"/>
+                    <constraint firstAttribute="trailing" secondItem="CVz-4g-u39" secondAttribute="trailing" constant="10" id="blf-vq-gz8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="knE-dR-MpT" secondAttribute="bottom" id="dFT-dH-r0F"/>
+                    <constraint firstItem="CVz-4g-u39" firstAttribute="leading" secondItem="knE-dR-MpT" secondAttribute="trailing" constant="15" id="dVR-NH-DhC"/>
+                    <constraint firstItem="knE-dR-MpT" firstAttribute="top" secondItem="fpU-Kr-JtV" secondAttribute="topMargin" id="qYh-hp-9aA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="switchCellLabel" destination="knE-dR-MpT" id="pC1-LD-9qg"/>
+                <outlet property="switchCellSwitch" destination="CVz-4g-u39" id="IJf-4j-yfN"/>
+            </connections>
+            <point key="canvasLocation" x="-16" y="56"/>
+        </tableViewCell>
+    </objects>
+</document>

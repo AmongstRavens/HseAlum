@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>isExpandable</key>
+			<true/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Образовательная программа</string>
+			<key>cellIdentifier</key>
+			<string>Dropdown Cell</string>
+			<key>additionalRows</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<false/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Бизнес-информатика</string>
+			<key>cellIdentifier</key>
+			<string>Basic Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<true/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Группа</string>
+			<key>cellIdentifier</key>
+			<string>Dropdown Cell</string>
+			<key>additionalRows</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<false/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>123</string>
+			<key>cellIdentifier</key>
+			<string>Basic Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<true/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Год выпуска</string>
+			<key>cellIdentifier</key>
+			<string>Dropdown Cell</string>
+			<key>additionalRows</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<false/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>2012</string>
+			<key>cellIdentifier</key>
+			<string>Basic Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Телефон</string>
+			<key>cellIdentifier</key>
+			<string>Basic Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>E-mail</string>
+			<key>cellIdentifier</key>
+			<string>Basic Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Видимость</string>
+			<key>cellIdentifier</key>
+			<string>Switch Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+</array>
+</plist>
