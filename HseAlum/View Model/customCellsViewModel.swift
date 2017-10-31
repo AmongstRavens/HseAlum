@@ -18,8 +18,7 @@ class CustomCellViewModel{
     }
     
     func loadCellDescriptor(for descriptionName: String){
-        //Change here for descriptionName
-        if let path = Bundle.main.path(forResource: "accountTableViewCellsDescription", ofType: "plist"){
+        if let path = Bundle.main.path(forResource: descriptionName, ofType: "plist"){
             let url = URL(fileURLWithPath: path)
             cellsDescriptors = NSMutableArray(contentsOf: url)! as! [[NSMutableDictionary]]
         }
@@ -28,7 +27,7 @@ class CustomCellViewModel{
         reloadTableView(for: nil)
     }
     
-    func getVisibleRowsIndexes(){
+    private func getVisibleRowsIndexes(){
         visibleRows.removeAll()
         for sectionDescriptor in cellsDescriptors{
             var visibleRowsInSection = [Int]()

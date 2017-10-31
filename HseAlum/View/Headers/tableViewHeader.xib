@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountViewController" customModule="HseAlum" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="tableViewHeaderView" customModule="HseAlum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="633" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVV-nP-Lhe">
+                    <rect key="frame" x="15" y="11" width="554" height="32"/>
+                    <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-QH-olk">
+                    <rect key="frame" x="589" y="10" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fVu-QH-olk" secondAttribute="height" multiplier="1:1" id="EnR-aJ-zLG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="34"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jVV-nP-Lhe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="5ld-HM-0W5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fVu-QH-olk" secondAttribute="trailing" constant="10" id="Bb8-zM-Tdg"/>
+                <constraint firstItem="fVu-QH-olk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="CZE-6C-hRN"/>
+                <constraint firstItem="jVV-nP-Lhe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="LRW-rx-nis"/>
+                <constraint firstItem="fVu-QH-olk" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Rxc-fr-DUc"/>
+                <constraint firstItem="jVV-nP-Lhe" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="cTs-hz-LY0"/>
+                <constraint firstItem="fVu-QH-olk" firstAttribute="leading" secondItem="jVV-nP-Lhe" secondAttribute="trailing" constant="20" id="xq1-tY-fGL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="addButton" destination="fVu-QH-olk" id="yY5-mS-OIG"/>
+                <outlet property="headerLabel" destination="jVV-nP-Lhe" id="fUx-lx-cse"/>
+            </connections>
+            <point key="canvasLocation" x="162.5" y="-547"/>
+        </view>
+    </objects>
+</document>

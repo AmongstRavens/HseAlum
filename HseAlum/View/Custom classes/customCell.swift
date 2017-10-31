@@ -13,7 +13,13 @@ class CustomCell : UITableViewCell{
     
     //MARK: Xib outlets
     @IBOutlet weak var switchCellLabel: UILabel!
-    @IBOutlet weak var switchCellSwitch: UISwitch!
+    @IBOutlet weak var switchCellSwitch: UISwitch!{
+        didSet{
+            if switchCellSwitch != nil{
+                switchCellSwitch.transform = CGAffineTransform(scaleX: 0.85, y: 0.85);
+            }
+        }
+    }
     @IBOutlet weak var dropdownCellImageView: UIImageView!
     @IBOutlet weak var dropdownCellLabel: UILabel!
     @IBOutlet weak var addItemCellLabel: UILabel!
@@ -25,6 +31,12 @@ class CustomCell : UITableViewCell{
     
     
     private var dropdownState : Bool = false
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        separatorInset.left = 20
+        separatorInset.right = 20
+    }
     
     func rotateButton(){
         if dropdownState == false{

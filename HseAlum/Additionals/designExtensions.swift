@@ -18,4 +18,20 @@ extension UIViewController{
             self.navigationController?.navigationBar.barStyle = .black
         }
     }
+    
+}
+
+extension UIView{
+    func addBlur(){
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            self.backgroundColor = UIColor.clear
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = self.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.layer.zPosition = -1
+            self.addSubview(blurEffectView)
+        }
+    }
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<false/>
+			<key>title</key>
+			<string>Новости и объявления</string>
+			<key>cellIdentifier</key>
+			<string>Switch Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<false/>
+			<key>title</key>
+			<string>Мероприятия</string>
+			<key>cellIdentifier</key>
+			<string>Switch Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<false/>
+			<key>title</key>
+			<string>Вакансии</string>
+			<key>cellIdentifier</key>
+			<string>Switch Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<false/>
+			<key>title</key>
+			<string>Спецпредложения</string>
+			<key>cellIdentifier</key>
+			<string>Switch Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<false/>
+			<key>title</key>
+			<string>Личная информация</string>
+			<key>cellIdentifier</key>
+			<string>Switch Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>isExpandable</key>
+			<false/>
+			<key>isExpanded</key>
+			<false/>
+			<key>isVisible</key>
+			<true/>
+			<key>value</key>
+			<string></string>
+			<key>title</key>
+			<string>Образовательная программа</string>
+			<key>cellIdentifier</key>
+			<string>Dropdown Cell</string>
+			<key>additionalRows</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+</array>
+</plist>

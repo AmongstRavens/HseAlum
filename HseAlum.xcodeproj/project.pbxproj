@@ -30,8 +30,16 @@
 		9779F7D31F7EBE760065665E /* accountTableViewCellsDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9779F7D21F7EBE760065665E /* accountTableViewCellsDescription.plist */; };
 		9779F7D51F7EC6A90065665E /* basicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9779F7D41F7EC6A90065665E /* basicCell.xib */; };
 		9779F7D71F7EC8E20065665E /* customCellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779F7D61F7EC8E20065665E /* customCellsViewModel.swift */; };
+		977AE1621F9A0B9600257CD1 /* tableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977AE1611F9A0B9600257CD1 /* tableViewHeader.xib */; };
+		977AE1641F9A0D9A00257CD1 /* tableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AE1631F9A0D9A00257CD1 /* tableViewHeaderView.swift */; };
 		978740CB1F8D382100EADB65 /* DynamicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978740CA1F8D382100EADB65 /* DynamicTableView.swift */; };
 		979A259C1F99179B00FB34D0 /* designExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A259B1F99179B00FB34D0 /* designExtensions.swift */; };
+		97A07AF01FA5F55C008B1216 /* pagesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A07AEF1FA5F55C008B1216 /* pagesScrollView.swift */; };
+		97C1BB201FA8D7B1009BFDCA /* pageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97C1BB1F1FA8D7B1009BFDCA /* pageView.xib */; };
+		97C798221F9D1C7A0085ED2D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C798211F9D1C7A0085ED2D /* SettingsTableViewController.swift */; };
+		97C798241F9D1E3D0085ED2D /* settingsCells.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C798231F9D1E3D0085ED2D /* settingsCells.plist */; };
+		97E7A54A1FA77CCD00DFA291 /* VacancyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E7A5491FA77CCD00DFA291 /* VacancyTableViewController.swift */; };
+		97E7A54C1FA77ED100DFA291 /* VacancyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E7A54B1FA77ED100DFA291 /* VacancyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +68,16 @@
 		9779F7D21F7EBE760065665E /* accountTableViewCellsDescription.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = accountTableViewCellsDescription.plist; sourceTree = "<group>"; };
 		9779F7D41F7EC6A90065665E /* basicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = basicCell.xib; sourceTree = "<group>"; };
 		9779F7D61F7EC8E20065665E /* customCellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCellsViewModel.swift; sourceTree = "<group>"; };
+		977AE1611F9A0B9600257CD1 /* tableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableViewHeader.xib; sourceTree = "<group>"; };
+		977AE1631F9A0D9A00257CD1 /* tableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewHeaderView.swift; sourceTree = "<group>"; };
 		978740CA1F8D382100EADB65 /* DynamicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableView.swift; sourceTree = "<group>"; };
 		979A259B1F99179B00FB34D0 /* designExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = designExtensions.swift; sourceTree = "<group>"; };
+		97A07AEF1FA5F55C008B1216 /* pagesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagesScrollView.swift; sourceTree = "<group>"; };
+		97C1BB1F1FA8D7B1009BFDCA /* pageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pageView.xib; sourceTree = "<group>"; };
+		97C798211F9D1C7A0085ED2D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		97C798231F9D1E3D0085ED2D /* settingsCells.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settingsCells.plist; sourceTree = "<group>"; };
+		97E7A5491FA77CCD00DFA291 /* VacancyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyTableViewController.swift; sourceTree = "<group>"; };
+		97E7A54B1FA77ED100DFA291 /* VacancyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +160,12 @@
 		9779F7C21F7E8EDD0065665E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97C1BB1F1FA8D7B1009BFDCA /* pageView.xib */,
 				9779F7AD1F7DAC350065665E /* Main.storyboard */,
-				978740CA1F8D382100EADB65 /* DynamicTableView.swift */,
+				977AE1651F9A109E00257CD1 /* Headers */,
+				977AE1661F9A10B200257CD1 /* Custom classes */,
 				9779F7CF1F7EA2E60065665E /* Custom cells xib */,
 				9779F7D81F7EDC7A0065665E /* Cells Descriptions */,
-				9779F7C71F7EA06B0065665E /* customCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +184,7 @@
 		9779F7D81F7EDC7A0065665E /* Cells Descriptions */ = {
 			isa = PBXGroup;
 			children = (
+				97C798231F9D1E3D0085ED2D /* settingsCells.plist */,
 				9779F7D21F7EBE760065665E /* accountTableViewCellsDescription.plist */,
 			);
 			path = "Cells Descriptions";
@@ -175,14 +193,36 @@
 		9779F7D91F7EDC9A0065665E /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				97A07AEF1FA5F55C008B1216 /* pagesScrollView.swift */,
 				9779F7D61F7EC8E20065665E /* customCellsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		977AE1651F9A109E00257CD1 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				977AE1611F9A0B9600257CD1 /* tableViewHeader.xib */,
+				977AE1631F9A0D9A00257CD1 /* tableViewHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		977AE1661F9A10B200257CD1 /* Custom classes */ = {
+			isa = PBXGroup;
+			children = (
+				97E7A54B1FA77ED100DFA291 /* VacancyTableViewCell.swift */,
+				978740CA1F8D382100EADB65 /* DynamicTableView.swift */,
+				9779F7C71F7EA06B0065665E /* customCell.swift */,
+			);
+			path = "Custom classes";
+			sourceTree = "<group>";
+		};
 		97D024C31F7EE7E90010E59C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				97E7A5491FA77CCD00DFA291 /* VacancyTableViewController.swift */,
+				97C798211F9D1C7A0085ED2D /* SettingsTableViewController.swift */,
 				9779F7C31F7E8F2A0065665E /* AccountViewController.swift */,
 			);
 			path = Controller;
@@ -257,9 +297,12 @@
 				975F56CA1F99115F00644F0A /* Lato-Light.ttf in Resources */,
 				975F56CB1F99115F00644F0A /* Lato-LightItalic.ttf in Resources */,
 				975F56CC1F99115F00644F0A /* Lato-Regular.ttf in Resources */,
+				97C1BB201FA8D7B1009BFDCA /* pageView.xib in Resources */,
+				97C798241F9D1E3D0085ED2D /* settingsCells.plist in Resources */,
 				9779F7D51F7EC6A90065665E /* basicCell.xib in Resources */,
 				9779F7CC1F7EA1A40065665E /* dropdownButtonCell.xib in Resources */,
 				9779F7D11F7EA38E0065665E /* switchCell.xib in Resources */,
+				977AE1621F9A0B9600257CD1 /* tableViewHeader.xib in Resources */,
 				9779F7B71F7DAC350065665E /* LaunchScreen.storyboard in Resources */,
 				9779F7CE1F7EA2B40065665E /* addItemCell.xib in Resources */,
 				9779F7B41F7DAC350065665E /* Assets.xcassets in Resources */,
@@ -275,13 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E7A54A1FA77CCD00DFA291 /* VacancyTableViewController.swift in Sources */,
+				97E7A54C1FA77ED100DFA291 /* VacancyTableViewCell.swift in Sources */,
 				978740CB1F8D382100EADB65 /* DynamicTableView.swift in Sources */,
 				9779F7AA1F7DAC350065665E /* AppDelegate.swift in Sources */,
 				9779F7D71F7EC8E20065665E /* customCellsViewModel.swift in Sources */,
+				977AE1641F9A0D9A00257CD1 /* tableViewHeaderView.swift in Sources */,
 				9779F7BF1F7E8BB50065665E /* UserModel.swift in Sources */,
 				9779F7C81F7EA06B0065665E /* customCell.swift in Sources */,
 				979A259C1F99179B00FB34D0 /* designExtensions.swift in Sources */,
 				9779F7C41F7E8F2A0065665E /* AccountViewController.swift in Sources */,
+				97A07AF01FA5F55C008B1216 /* pagesScrollView.swift in Sources */,
+				97C798221F9D1C7A0085ED2D /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

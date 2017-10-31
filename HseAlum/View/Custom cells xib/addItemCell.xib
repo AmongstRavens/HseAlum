@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,13 +26,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item Cell Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu1-gU-hm1">
-                        <rect key="frame" x="10" y="0.0" width="306" height="43.5"/>
+                        <rect key="frame" x="10" y="0.0" width="298.5" height="43.5"/>
                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyg-ZL-i1z">
-                        <rect key="frame" x="331" y="0.0" width="43.5" height="43.5"/>
+                        <rect key="frame" x="323.5" y="0.0" width="43.5" height="43.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Jyg-ZL-i1z" secondAttribute="height" multiplier="1:1" id="LgS-Y5-ZZv"/>
                         </constraints>
@@ -43,12 +44,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="wu1-gU-hm1" secondAttribute="bottom" id="KuV-04-66S"/>
-                    <constraint firstAttribute="trailing" secondItem="Jyg-ZL-i1z" secondAttribute="trailing" id="ON4-hp-tkf"/>
-                    <constraint firstItem="Jyg-ZL-i1z" firstAttribute="width" secondItem="Jyg-ZL-i1z" secondAttribute="height" multiplier="1:1" id="UNs-Ph-sp6"/>
                     <constraint firstItem="wu1-gU-hm1" firstAttribute="leading" secondItem="Zl2-p6-s83" secondAttribute="leading" constant="10" id="das-Gc-ZyK"/>
                     <constraint firstItem="wu1-gU-hm1" firstAttribute="top" secondItem="Zl2-p6-s83" secondAttribute="top" id="kuu-na-4uw"/>
                     <constraint firstItem="Jyg-ZL-i1z" firstAttribute="leading" secondItem="wu1-gU-hm1" secondAttribute="trailing" constant="15" id="nE2-ZZ-sAv"/>
                     <constraint firstAttribute="bottom" secondItem="Jyg-ZL-i1z" secondAttribute="bottom" id="oeM-hg-2Jq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Jyg-ZL-i1z" secondAttribute="trailing" id="pDd-3f-AXa"/>
                     <constraint firstItem="Jyg-ZL-i1z" firstAttribute="top" secondItem="Zl2-p6-s83" secondAttribute="top" id="v8f-XM-Wk0"/>
                 </constraints>
             </tableViewCellContentView>

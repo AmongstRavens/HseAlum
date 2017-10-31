@@ -8,24 +8,19 @@
 
 import UIKit
 
-class DynamicTableView: UITableView {
+enum PageState{
+    case Closed
+    case Opened
+    case Scrollable
+}
 
-//    override var intrinsicContentSize: CGSize {
-//        self.layoutIfNeeded()
-//        return CGSize(width: UIViewNoIntrinsicMetric, height: self.contentSize.height)
-//    }
-//
-//    override func reloadData() {
-//        print("in reload data")
-//        super.reloadData()
-//        self.invalidateIntrinsicContentSize()
-//    }
+class DynamicTableView: UITableView {
+    var state : PageState = .Scrollable
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         backgroundColor = .white
-        isScrollEnabled = false
-        tableFooterView = UIView(frame: .zero)
+        tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: 20))
     }
     
     func registerCells(){
@@ -37,6 +32,14 @@ class DynamicTableView: UITableView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        layer.cornerRadius = 30
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 0.5
+        clipsToBounds = false
     }
     
 }

@@ -25,26 +25,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropdown Cell Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-jJ-nYR">
-                        <rect key="frame" x="0.0" y="0.0" width="311.5" height="43.5"/>
-                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="19"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-DM-oWV">
-                        <rect key="frame" x="331.5" y="0.0" width="43.5" height="43.5"/>
+                        <rect key="frame" x="323.5" y="0.0" width="43.5" height="43.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="gGM-DM-oWV" secondAttribute="height" multiplier="1:1" id="bcE-rC-Rs5"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropdown Cell Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-jJ-nYR">
+                        <rect key="frame" x="8" y="0.0" width="295.5" height="44"/>
+                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="qbE-jJ-nYR" firstAttribute="top" secondItem="8fh-j1-0wA" secondAttribute="top" id="3No-52-4a1"/>
                     <constraint firstAttribute="bottom" secondItem="gGM-DM-oWV" secondAttribute="bottom" id="71A-sT-ubG"/>
-                    <constraint firstItem="gGM-DM-oWV" firstAttribute="leading" secondItem="qbE-jJ-nYR" secondAttribute="trailing" constant="20" id="LkV-fo-bLA"/>
-                    <constraint firstAttribute="bottom" secondItem="qbE-jJ-nYR" secondAttribute="bottom" id="MxA-Cn-QcM"/>
-                    <constraint firstItem="qbE-jJ-nYR" firstAttribute="leadingMargin" secondItem="8fh-j1-0wA" secondAttribute="leading" constant="8" id="QSH-MI-ucN"/>
-                    <constraint firstItem="qbE-jJ-nYR" firstAttribute="top" secondItem="8fh-j1-0wA" secondAttribute="top" id="kL7-jf-Abt"/>
-                    <constraint firstAttribute="trailing" secondItem="gGM-DM-oWV" secondAttribute="trailing" id="m7b-js-zLP"/>
+                    <constraint firstItem="qbE-jJ-nYR" firstAttribute="leading" secondItem="8fh-j1-0wA" secondAttribute="leadingMargin" id="A3A-xk-dx3"/>
+                    <constraint firstItem="gGM-DM-oWV" firstAttribute="leading" secondItem="qbE-jJ-nYR" secondAttribute="trailing" constant="20" id="O31-d1-N0x"/>
+                    <constraint firstAttribute="bottom" secondItem="qbE-jJ-nYR" secondAttribute="bottom" id="Rrx-3b-0xK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gGM-DM-oWV" secondAttribute="trailing" id="dXG-lI-4jK"/>
                     <constraint firstItem="gGM-DM-oWV" firstAttribute="top" secondItem="8fh-j1-0wA" secondAttribute="top" id="yu2-ht-woj"/>
                 </constraints>
             </tableViewCellContentView>
