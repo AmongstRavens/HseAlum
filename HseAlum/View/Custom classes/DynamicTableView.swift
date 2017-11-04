@@ -16,6 +16,16 @@ enum PageState{
 
 class DynamicTableView: UITableView {
     var state : PageState = .Scrollable
+    //awdawd
+    var container: UIView!{
+        didSet{
+            container.layer.shadowColor = UIColor.lightGray.cgColor
+            container.layer.shadowOffset = CGSize.zero
+            container.layer.shadowRadius = 3
+            container.layer.shadowOpacity = 1
+            container.layer.cornerRadius = 30
+        }
+    }
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -38,8 +48,8 @@ class DynamicTableView: UITableView {
         super.draw(rect)
         layer.cornerRadius = 30
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.borderWidth = 0.5
-        clipsToBounds = false
+        layer.borderWidth = 0.2
+        clipsToBounds = true
     }
     
 }

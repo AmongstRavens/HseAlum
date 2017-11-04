@@ -19,8 +19,9 @@ class PagesScrollView : UIScrollView{
     //MARK: Fields
     private struct designConstants{
         static var cellHeight : CGFloat = 40
-        static var headerHeight : CGFloat = 50
+        static var headerHeight : CGFloat = 60
         static var headerStickout : CGFloat = 15
+        static var shadowInset: CGFloat = 23
     }
     
     weak var pageDelegate : PagesScrollViewDelegate?{
@@ -40,11 +41,12 @@ class PagesScrollView : UIScrollView{
     override func awakeFromNib() {
         super.awakeFromNib()
         //To make shadow visible
-        self.contentInset.top = 2
         self.contentSize = CGSize(width: self.frame.width, height: self.frame.height + 50)
         self.showsVerticalScrollIndicator = false
         self.delegate = self
+        self.contentInset = UIEdgeInsetsMake(designConstants.shadowInset, 0, 0, 0)
         
+
         customCellsViewModel.loadCellDescriptor(for: descriptorResourceName)
         addTableViews(count: customCellsViewModel.numberOfTableViews)
         tableViewUIObserver()
@@ -60,8 +62,10 @@ class PagesScrollView : UIScrollView{
         //Set tableViews height to fill space
         for index in 0 ..< tableViews.count{
             if index == 0{
+                tableViews[index].container.frame.size = CGSize(width: self.frame.width, height: self.frame.height - CGFloat(customCellsViewModel.numberOfTableViews - 1) * designConstants.headerStickout)
                 tableViews[index].frame.size = CGSize(width: self.frame.width, height: self.frame.height - CGFloat(customCellsViewModel.numberOfTableViews - 1) * designConstants.headerStickout)
             } else{
+                tableViews[index].container.frame.size = CGSize(width: self.frame.width, height: self.frame.height - CGFloat(customCellsViewModel.numberOfTableViews) * designConstants.headerStickout)
                 tableViews[index].frame.size = CGSize(width: self.frame.width, height: self.frame.height - CGFloat(customCellsViewModel.numberOfTableViews) * designConstants.headerStickout)
             }
         }
@@ -69,16 +73,18 @@ class PagesScrollView : UIScrollView{
     
     private func addTableViews(count: Int){
         for index in 0 ..< count{
-            let shadowContainer = UIView(frame: CGRect(x: 0, y: CGFloat(index) * designConstants.headerHeight, width: 0, height: 0))
+            let container = UIView(frame: CGRect(x: 0, y: CGFloat(index) * designConstants.headerHeight + designConstants.shadowInset, width: 0, height: 0))
+
             let frame = CGRect(x: 0, y: 0, width: 0, height: 0)
             let tableView = DynamicTableView(frame: frame, style: .plain)
+            tableView.container = container
             tableView.registerCells()
             tableView.delegate = self
             tableView.dataSource = self
             tableView.isScrollEnabled = false
             
-            shadowContainer.addSubview(tableView)
-            self.addSubview(shadowContainer)
+            container.addSubview(tableView)
+            self.addSubview(container)
             tableViews.append(tableView)
         }
     }
@@ -98,21 +104,21 @@ class PagesScrollView : UIScrollView{
         if let pickedTableView = page.parent{
             switch gesture.state{
             case .began, .changed:
-                pickedTableView.frame.origin.y = gesture.translation(in: pickedTableView).y
+                pickedTableView.container.frame.origin.y = gesture.translation(in: pickedTableView).y
             case .ended:
                 print(gesture.translation(in: pickedTableView))
                 if gesture.translation(in: pickedTableView).y / pickedTableView.frame.height < 0.5{
                     pickedTableView.state = .Opened
                     UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                        pickedTableView.frame.origin.y = 0
-                        self.contentOffset.y = 0
+                        pickedTableView.container.frame.origin.y = 0
+                        self.contentOffset.y = -designConstants.shadowInset
                     }, completion: nil)
                 } else{
                     for view in tableViews{
                         view.state = .Scrollable
                         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                            view.frame.origin.y = CGFloat(self.tableViews.index(of: view)!) * designConstants.headerHeight
-                            self.contentOffset.y = 0
+                            view.container.frame.origin.y = CGFloat(self.tableViews.index(of: view)!) * designConstants.headerHeight
+                            self.contentOffset.y = -designConstants.shadowInset
                         }, completion: { _ in
                             self.isScrollEnabled = true
                             page.removeGestureRecognizer(self.panGesture)
@@ -137,13 +143,13 @@ class PagesScrollView : UIScrollView{
                     header.addGestureRecognizer(panGesture)
                     view.state = .Opened
                     UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                        view.frame.origin.y = 0
-                        self.contentOffset.y = 0
+                        view.container.frame.origin.y = self.contentOffset.y * (0.8 - CGFloat(Double(self.tableViews.index(of: view)!) * 0.1)) + designConstants.headerHeight * CGFloat(self.tableViews.index(of: view)!)
+                        self.contentOffset.y = -designConstants.shadowInset
                     }, completion: nil)
                 } else{
                     view.state = .Closed
                     UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                        view.frame.origin.y = self.frame.height - CGFloat(self.tableViews.count - self.tableViews.index(of: view)!) * designConstants.headerStickout
+                        view.container.frame.origin.y = self.frame.height - CGFloat(self.tableViews.count - self.tableViews.index(of: view)!) * designConstants.headerStickout
                     }, completion: nil)
                 }
             }
@@ -153,7 +159,7 @@ class PagesScrollView : UIScrollView{
                 view.state = .Scrollable
                 header.removeGestureRecognizer(panGesture)
                 UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                    view.frame.origin.y = CGFloat(self.tableViews.index(of: view)!) * designConstants.headerHeight
+                    view.container.frame.origin.y = CGFloat(self.tableViews.index(of: view)!) * designConstants.headerHeight
                 }, completion: nil)
             }
         }
@@ -232,7 +238,7 @@ extension PagesScrollView : UITableViewDelegate, UITableViewDataSource, UIScroll
             for index in 0 ..< tableViews.count{
                 //This provides scrolldown effect
                 //Change 0.8 constant to increase velocity and 0.1 to provide more/less slide out effect
-                tableViews[index].frame.origin.y = scrollView.contentOffset.y * (0.8 - CGFloat(Double(index) * 0.1)) + designConstants.headerHeight * CGFloat(index)
+                tableViews[index].container.frame.origin.y = scrollView.contentOffset.y * (0.8 - CGFloat(Double(index) * 0.1)) + designConstants.headerHeight * CGFloat(index)
             }
         }
     }
